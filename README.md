@@ -1,7 +1,7 @@
 ![alt text](https://github.com/jrgood01/AutoArch/blob/main/screenshot.png)
 
 # Auto Architecture
-AutoArch is a web application that leverages the power of GPT-4 to automatically generate and visualize recommended AWS architectures based on a user's project description. This is an experiment into automated infastructure suggestions.
+Auto Architecture is a web application that leverages the power of GPT-4 to automatically generate and visualize recommended AWS architectures based on a user's project description. This is an experiment into automated infastructure suggestions.
 ## Credits:
     - Chadcn (ui components): https://ui.shadcn.com/
     - D3.js (for graph visualisation): https://d3-graph-gallery.com/

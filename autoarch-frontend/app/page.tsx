@@ -58,58 +58,61 @@ export default function IndexPage() {
     fetchArchSuggestion();
   };
 
+
   return (
     <React.Fragment>
-       <div style={{position:"relative",display:"grid", gridTemplateColumns:"1fr 3fr", borderBottomWidth:"1px"}}>
-          <div style={{borderRightWidth:"1px"}}>
-            <div style={{textAlign:"center"}}>
-              <h3 className="scroll-m-20 border-b text-2xl font-semibold tracking-tight" style={{padding:"10px"}}>
-                Description
-              </h3>
-            </div>
-            <p className="leading-7 [&:not(:first-child)]:mt-6" style={{padding:"0px 5px"}}>
-              {architectureDescription}
-            </p>
+      <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr 3fr", borderBottomWidth: "1px" }}>
+        <div style={{ borderRightWidth: "1px" }}>
+          <div style={{ textAlign: "center" }}>
+            <h4 className="scroll-m-20 border-b text-xl font-semibold tracking-tight" style={{ padding: "10px" }}>
+              Description
+            </h4>
           </div>
-        <div style={{textAlign:"center"}}>
-          <h3 className="scroll-m-20 border-b text-2xl font-semibold tracking-tight" style={{padding:"10px"}}>
-            Architecture Graph
-          </h3>
+          <p className="leading-7 [&:not(:first-child)]:mt-6" style={{ padding: "0px 5px" }}>
+            {architectureDescription}
+          </p>
+        </div>
+        <div style={{ position: "relative" }}>
+          <div style={{ textAlign: "center" }}>
+            <h4 className="scroll-m-20 border-b text-xl font-semibold tracking-tight" style={{ padding: "10px" }}>
+              Architecture Graph
+            </h4>
+          </div>
           {preLoader && (
-            <div style={{position:"absolute", width:"100%", height:"100%"}}>
+            <div style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0 }}>
               <div
-              style={{
-                position: "relative",
-                width: "100%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div className="preloader" />
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <div className="preloader" />
+              </div>
             </div>
-          </div>
-
           )}
-
-          <NetworkVisualizer adjacencyDict={archSuggestion}/>
+          <div style={{ position: "relative", textAlign: "center", paddingBottom: "20px" }}>
+            <NetworkVisualizer adjacencyDict={archSuggestion} />
+          </div>
         </div>
       </div>
-
-        <div className="flex w-full max-w-sm items-center space-x-2 input-container">
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>
+        <div className="flex w-full max-w-lg items-center space-x-2 input-container">
           <Input
-            type="email"
+            type="description"
             placeholder="Project Description"
             value={projectDescription}
             onChange={handleProjectDescriptionChange}
+            style={{ width: "100%" }}
           />
-          <Button type="submit" onClick={handleButtonClick}>
+          <Button type="submit" disabled={preLoader} onClick={handleButtonClick}>
             GO
           </Button>
         </div>
-
-   
+      </div>
     </React.Fragment>
   );
 }

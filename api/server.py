@@ -34,12 +34,12 @@ Here are examples of simple (XML, JSON) pairs that show the expected behavior:
 </instructions>
 
 <output>
-    <string description="A 3 paragraph description of the suggested AWS architecture from the persepctive of a senior engineer. Discuss all services needed." name="architecture_description" required="true"/>
+    <string description="An in-depth, technical, 3 paragraph description of the suggested AWS architecture. Discuss all services needed." name="architecture_description" required="true"/>
     <list name="service_list">
         <object>
             <string description="AWS service name" name="service" required="true"/>
             <string description="A description of the service's function in the app" name="service" required="true"/>
-            <list required="true" name="output_services" description="list of services that the service outputs data to">
+            <list required="true" name="output_services" description="list of services that the service depends on.">
                 <object>
                     <string description="AWS service name" name="service" required="true"/>
                 </object>
@@ -50,7 +50,7 @@ Here are examples of simple (XML, JSON) pairs that show the expected behavior:
 
 
 <prompt>
-Please suggest an AWS architecture for the project description:
+Please suggest an AWS architecture for the project description. Define any subnets or VPNs that need to be setup in order to create the app. All services must have atleast one dependant or dependancy.: 
 {{project_description}}
 @complete_json_suffix
 </prompt>

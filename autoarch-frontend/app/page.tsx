@@ -62,9 +62,9 @@ export default function IndexPage() {
   return (
     <React.Fragment>
       <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1fr 3fr", borderBottomWidth: "1px" }}>
-        <div style={{ borderRightWidth: "1px" }}>
-          <div style={{ textAlign: "center" }}>
-            <h4 className="scroll-m-20 border-b text-xl font-semibold tracking-tight" style={{ padding: "10px" }}>
+        <div style={{ borderRightWidth: "1px"}}>
+          <div style={{ textAlign: "center"}}>
+            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight" style={{ padding: "10px" }}>
               Description
             </h4>
           </div>
@@ -72,9 +72,9 @@ export default function IndexPage() {
             {architectureDescription}
           </p>
         </div>
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative", background:"#000" }}>
           <div style={{ textAlign: "center" }}>
-            <h4 className="scroll-m-20 border-b text-xl font-semibold tracking-tight" style={{ padding: "10px" }}>
+            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight" style={{ padding: "10px" }}>
               Architecture Graph
             </h4>
           </div>

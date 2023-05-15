@@ -78,6 +78,69 @@ async def get_arch_suggestion(input_data: InputText):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/get_arch_suggestion_mock")
+async def get_arch_suggestion(input_data: InputText):
+    print("Getting suggestion for: ", input_data.input_text)
+    try:
+        
+        return {
+            "architecture_description": "The suggested AWS architecture for a video streaming app consists of three main components: storage, processing, and delivery. For storage, Amazon S3 can be used to store the video files. For processing, AWS Lambda can be used to transcode the videos into different formats and resolutions using Amazon Elastic Transcoder. For delivery, Amazon CloudFront can be used as a content delivery network (CDN) to distribute the videos to users with low latency. Additionally, Amazon API Gateway and AWS App Runner can be used to create and manage APIs for the app, while Amazon VPC can be used to set up a secure and isolated network environment with subnets and VPNs.",
+            "service_list": [
+                {
+                    "service": "Amazon S3",
+                    "description": "Stores the video files",
+                    "output_services": [
+                        {
+                            "service": "AWS Lambda"
+                        }
+                    ]
+                },
+                {
+                    "service": "AWS Lambda",
+                    "description": "Transcodes videos into different formats and resolutions using Amazon Elastic Transcoder",
+                    "output_services": [
+                        {
+                            "service": "Amazon Elastic Transcoder"
+                        }
+                    ]
+                },
+                {
+                    "service": "Amazon Elastic Transcoder",
+                    "description": "Transcodes videos for adaptive streaming",
+                    "output_services": [
+                        {
+                            "service": "Amazon CloudFront"
+                        }
+                    ]
+                },
+                {
+                    "service": "Amazon CloudFront",
+                    "description": "Delivers videos to users with low latency"
+                },
+                {
+                    "service": "Amazon API Gateway",
+                    "description": "Creates and manages APIs for the app",
+                    "output_services": [
+                        {
+                            "service": "AWS App Runner"
+                        }
+                    ]
+                },
+                {
+                    "service": "AWS App Runner",
+                    "description": "Runs the app and manages its deployment"
+                },
+                {
+                    "service": "Amazon VPC",
+                    "description": "Sets up a secure and isolated network environment with subnets and VPNs"
+                }
+            ]
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 if __name__ == "__main__":
     import uvicorn
 

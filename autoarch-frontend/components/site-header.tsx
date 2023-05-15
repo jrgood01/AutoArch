@@ -5,41 +5,15 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
 
-export function SiteHeader({ api_key_error }) {
+export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
-              <div
-                className={buttonVariants({
-                  size: "sm",
-                  variant: "ghost",
-                })}
-              >
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                        <div>
-                        <Icons.key className={`h-5 w-5 ${api_key_error ? 'text-red-500' : ''}`} />
-                        <span className="sr-only">API Key</span>
-                        </div>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Edit API key</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-
-              </div>
+  
             <Link
               href={siteConfig.links.github}
               target="_blank"

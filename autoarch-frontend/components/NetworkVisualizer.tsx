@@ -96,6 +96,7 @@ export default function NetworkVisualizer({ adjacencyDict }) {
       .attr("class", "node")
       .on("click", selectNode)
       .attr("data-id", (d) => d.id);
+      
       node
         .append("circle")
         .attr("r", 30)
@@ -147,9 +148,7 @@ export default function NetworkVisualizer({ adjacencyDict }) {
   }, [adjacencyDict]);
 
   return (
-    <div>
-      <svg ref={d3Container} width="100%" height="80vh" />
-    </div>
+      <svg ref={d3Container} width="100%" height="100%"/>
+ 
     )
 }
-

@@ -9,7 +9,7 @@ Auto Architecture is a web application that leverages the power of GPT-4 to auto
     - Nextjs: https://nextjs.org/
     - FastAPI: https://fastapi.tiangolo.com/lo/
 ## Project structure
-    - api: A fastapi api that uses gaurdrails + openAI API to return AWS architecture   suggestions
+    - api: A fastapi api that uses guardrails + openAI API to return AWS architecture   suggestions
     - autoarch-frontend: A nextjs project containing the frontend for the app 
 ## Feature Backlog:
     - Agent to convert suggestion into terraform script

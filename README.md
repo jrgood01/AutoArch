@@ -5,7 +5,7 @@ Auto Architecture is a web application that leverages the power of GPT-4 to auto
 ## Credits:
     - shadcn (ui components): https://ui.shadcn.com/
     - D3.js (for graph visualisation): https://d3-graph-gallery.com/
-    - Gaurdrails AI: https://shreyar.github.io/guardrails/
+    - Guardrails AI: https://shreyar.github.io/guardrails/
     - Nextjs: https://nextjs.org/
     - FastAPI: https://fastapi.tiangolo.com/lo/
 ## Project structure

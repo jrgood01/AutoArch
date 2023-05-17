@@ -50,7 +50,7 @@ Wait for Review: We aim to review and respond to pull requests within 3 business
 
 Respond to Feedback: If we ask for changes or have questions about your pull request, please respond. We're working together to improve the project, and your insights are valuable!
 
-Join the Discord Server: For additional discussions, queries, or to connect with the community, join our Discord server.
+Join the Discord Server: For additional discussions, queries, or to connect with the community, join our [discord server](https://discord.gg/4D3T3rHF).
 
 ## Code of Conduct
 By contributing, you agree to adhere to our Contributor Covenant. This helps ensure a welcoming and inclusive environment for everyone involved in the project.

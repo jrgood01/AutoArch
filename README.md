@@ -3,9 +3,6 @@
 # Auto Architecture
 Auto Architecture is a web application that leverages the power of GPT-4 to automatically generate and visualize recommended AWS architectures based on a user's project description. This is an experiment into automated infastructure suggestions.
 ## Running the project
-### With docker
-    - run docker-compose up
-### Without docker
     - Navigate to the API folder and run "uvicorn server:app" to run the backend
     - Navigate to the autoarch-frontend directory and run "npm run dev"
 ## Credits:
